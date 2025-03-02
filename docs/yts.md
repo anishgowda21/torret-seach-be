@@ -3,18 +3,22 @@
 Welcome to the YTS API! This API allows you to search for movie torrents on YTS.
 
 ## Search Endpoint
+
 - **Method**: GET
 - **Path**: `/yts`
 - **Description**: Search for movie torrents on YTS
 
 ### Parameters
+
 - **query** (required): Search term (e.g., "hulk")
 - **img** (optional, default: false): Whether to include base64-encoded cover images (pass any value to enable)
 
 ### Example
-`/yts?query=hulk`
+
+`/yts/search?query=hulk`
 
 ### Response Example
+
 ```json
 {
   "status": "ok",
@@ -58,6 +62,7 @@ Welcome to the YTS API! This API allows you to search for movie torrents on YTS.
 ```
 
 ## Image Encoding
+
 When the `img` parameter is provided, cover images will be returned as base64-encoded data URLs, like this:
 
 ```
@@ -67,6 +72,7 @@ data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgF.
 This allows you to display the images directly in a web browser without making additional requests.
 
 ## Error Handling
+
 If an error occurs, the API will return an error response:
 
 ```json

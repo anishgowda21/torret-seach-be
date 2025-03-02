@@ -13,7 +13,7 @@ Welcome to the Nyaa API! This API allows you to search for anime torrents on Nya
 - **page** (optional, default: 1): Page number
 
 ### Example
-`/nyaa?query=naruto&ord_by=date&page=1`
+`/nyaa/search?query=naruto&ord_by=date&page=1`
 
 ### Response Example
 ```json

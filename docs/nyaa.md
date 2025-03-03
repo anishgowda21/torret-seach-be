@@ -3,19 +3,23 @@
 Welcome to the Nyaa API! This API allows you to search for anime torrents on Nyaa.si.
 
 ## Search Endpoint
+
 - **Method**: GET
 - **Path**: `/nyaa`
 - **Description**: Search for anime torrents on Nyaa.si
 
 ### Parameters
+
 - **query** (required): Search term (e.g., "naruto")
 - **ord_by** (optional, default: "seeders"): Order by "seeders" or "date"
 - **page** (optional, default: 1): Page number
 
 ### Example
+
 `/nyaa/search?query=naruto&ord_by=date&page=1`
 
 ### Response Example
+
 ```json
 {
   "status": "success",
@@ -40,6 +44,7 @@ Welcome to the Nyaa API! This API allows you to search for anime torrents on Nya
 ```
 
 ## Error Handling
+
 If an error occurs, the API will return an error response with details:
 
 ```json

@@ -24,7 +24,8 @@ export const searchNyaa = async (req: Request, res: Response) => {
 
   const query = encodeURI(req.query.query);
   const orderBy = req.query.ord_by === "date" ? "id" : "seeders";
-  const page = req.query.page ? parseInt(req.query.page as string) : 1;
+  const parsed = parseInt(req.query.page as string, 10);
+  const page = req.query.page && !isNaN(parsed) ? parsed : 1;
 
   try {
     // Try to get from cache

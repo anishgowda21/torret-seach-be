@@ -7,6 +7,7 @@ import {
   ytsRoutes,
   healthRoutes,
 } from "./routes";
+import cors from "cors";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -17,6 +18,9 @@ import { cacheService } from "./cache";
 // Initialize express
 const app = express();
 const port = process.env.PORT || 5001;
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware
 app.use(express.json());
